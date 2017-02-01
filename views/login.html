@@ -1,0 +1,46 @@
+<div ng-app="petApp" ng-controller="loginCtrl">
+    <div class="container">
+      <div class="row">
+        <div class="top30 center-align">
+          <img src="images/logo.png">
+        </div>
+          <div class="col l6 m8 s12 offset-m2 offset-l3 card-panel">
+            <form class="form-login" name="loginForm">
+              <div class="input-field">
+                <input ng-required="true" id="login" type='text' class="validate" name="email" ng-model="anunciante.email">
+                <label for="numero">Login</label>
+              </div>
+              <div class="input-field">
+                <input ng-required="true" id="senha" type='password' class="validate" name="senha" ng-model="anunciante.senha">
+                <label for="numero">Senha</label>
+              </div>
+              <div class="center-align">
+              <button class="btn waves-effect waves-light orange darken-2" ng-click="login(anunciante)">Enviar
+              </button>
+              </div>
+            </form>
+
+        </div>
+          <div class="row">
+            <div class="col l6 m8 s12 offset-m2 offset-l3 center-align">
+              <a href='/' class="orange-text text-darken-1">Voltar</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  <footer class="page-footer blue-grey darken-2">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12 offset-l3 center-align">
+          <h5 class="white-text">Siga-nos nas redes sociais.</h1>
+          <a href=""><p class="grey-text text-lighten-4">Facebook</p></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center-align">
+        © 2016 GoPet - Todos os Direitos Reservados
+      </div>
+    </div>
+    </footer>
+</div>

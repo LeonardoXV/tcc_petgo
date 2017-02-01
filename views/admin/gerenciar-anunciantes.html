@@ -1,0 +1,104 @@
+<div ng-controller="admCtrl">
+    <!-- Topo //-->
+    <div class="row top40">
+      <div class="col s12 m8 offset-l3">
+         <nav>
+          <div class="nav-wrapper">
+            <div class="col s12 truncate">
+              <a onClick="return false;" href="" class="breadcrumb">Anunciantes</a>
+              <a href="#!" class="breadcrumb">Listagem</a>
+              <a href="#!" class="breadcrumb">{{anunciante.nomeFantasia}}</a>
+            </div>
+          </div>
+       </nav>
+      </div>
+    </div>
+
+    <!-- Dados do Anunciante //-->
+  <div class="row top25">
+    <form class="col s12 m8 offset-l3">
+
+    <div class="row">
+      <div class="input-field col s12">
+        <input disabled id="cnpj" type="text" class="validate" value="{{anunciante.cnpj}}">
+        <label for="cnpj">CNPJ</label>
+      </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+          <input disabled id="razaoSocial" type="text" class="validate" value="{{anunciante.razaoSocial}}">
+          <label for="razaoSocial">Razão Social</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="nomeFantasia" type="text" class="validate" value="{{anunciante.nomeFantasia}}">
+          <label for="nomeFantasia">Nome Fantasia</label>
+        </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="logradouro" type="text" class="validate" value="{{anunciante.logradouro}}">
+        <label for="logradouro">Rua</label>
+      </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s4">
+          <input id="cidade" type="text" class="validate" value="{{anunciante.cidade}}">
+          <label for="cidade">Cidade</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="estado" type="text" class="validate" value="{{anunciante.estado}}">
+          <label for="estado">Estado</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="cep" type="text" class="validate" value="{{anunciante.cep}}">
+          <label for="cep">CEP</label>
+        </div>
+    </div>
+      <div class="row">
+      <div class="input-field col s6">
+        <input id="email" type="text" class="validate" value="{{anunciante.email}}">
+        <label for="email">Email de Login</label>
+      </div>
+      <div class="input-field col s6">
+        <select multiple>
+            <option value="" disabled selected>Serviços Oferecidos</option>
+            <option value="1">PetShop</option>
+            <option value="2">Veterinário</option>
+            <option value="3">Banho e Tosa</option>
+            <option value="4">Adestrador</option>
+            <option value="5">PetWalker</option>
+            <option value="6">PetSitter</option>
+          </select>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="input-field col s6">
+          <input id="site" type="text" class="validate" value="{{anunciante.site}}">
+          <label for="site">Site</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="social" type="text" class="validate" value="{{anunciante.social}}">
+          <label for="social">Rede Social</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="input-field col s4">
+          <select>
+            <option value="" disabled selected>Status</option>
+            <option value="1">Autorizado</option>
+            <option value="3">Bloqueado</option>
+          </select>
+        </div>
+        <div class="input-field col s4">
+          <a class="waves-effect waves-light btn-large orange darken-1">Salvar</a>
+        </div>
+        <div class="input-field col s4">
+          <a class="waves-effect waves-light btn-large red darken-1">Deletar Anunciante</a>
+        </div>
+    </div>
+
+    </form>
+  </div> 
+</div>    

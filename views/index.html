@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<section id='inicio'>
+<html ng-app="home">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GoPet</title>
+    <link rel="javascript" href="javascript/app"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link rel="stylesheet" href="stylesheets/home.css">
+  </head>
+  <body ng-controller="homeCtrl">
+    <div class="navbar-fixed">
+      <nav class='blue-grey darken-2' role='navigation'>
+        <div class="nav-wrapper container">
+          <a href="#" class="brand-logo"><img src="images/logo2.png"></a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">O App</a></li>
+            <li><a href="#participe">Participe</a></li>
+            <li><a href='/login#/' class="waves-effect waves-light btn orange darken-1">Login</a></li>
+          </ul>
+          <ul class="side-nav blue-grey darken-4" id="mobile-demo">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">O App</a></li>
+            <li><a href="#participe">Participe</a></li>
+            <li><a href='/login.html'>Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Slider de Imagens //-->
+      <div class="slider text-slider">
+          <ul class="slides">
+               <li>
+                  <img src="images/slide1.jpg">
+                  <div class="caption left-align orange-text text-darken-3">
+                  <h3>Contate Veterinários<br>da região!</h3>
+                      <h5 class="light orange-text text-darken-3">Especialistas próximos de você.</h5>
+                  </div>
+              </li>
+               <li>
+                   <img src="images/slide2.jpg">
+                  <div class="caption center-align orange-text text-darken-3">
+                      <h3>Encontre lojas de produtos pet!</h3>
+                      <h5 class="light orange-text text-darken-3">Praticidade e conforto que você merece.</h5>
+                  </div>
+              </li>
+              <li>
+                  <img src="images/slide3.jpg">
+                   <div class="caption right-align orange-text text-darken-3">
+                       <h3>Conheça profissionais<br>adequados!</h3>
+                      <h5 class="light orange-text text-darken-3">DogWalkers, Adestradores e PetSitters.</h5>
+                  </div>
+               </li>
+           </ul>
+        </div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.slider').slider({full_width: true});
+            });
+        </script>
+      <!-- Fim do Slider de Imagens //-->
+
+      <div class="row blue-grey lighten-5 countdown">
+        <div class="col s12 m12">
+          <div class="row">
+            <div class="col s12 m8 offset-m2">
+              <div class="col s12 m3">
+                <h1 class='center-align' id='dia'></h1>
+                <h5 class='center-align'>dias</h5>
+              </div>
+              <div class="col s12 m3">
+                <h1 class='center-align' id='hora'></h1>
+                <h5 class='center-align'>horas</h5>
+              </div>
+              <div class="col s12 m3">
+                <h1 class='center-align' id='minutos'></h1>
+                <h5 class='center-align'>minutos</h5>
+              </div>
+              <div class="col s12 m3">
+                <h1 class='center-align' id='segundos'></h1>
+                <h5 class='center-align'>segundos</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id='sobre' class="orange darken-1">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m12">
+            <h1 class='center-align white-text sobre-titulo'>
+              <i class="material-icons big-icon">help_outline</i><br>
+              Como Funciona
+            </h1>
+          </div>
+        </div>
+        <div class="row row-passos">
+
+          <div class="passos">
+
+          <!-- Módulo 1 //-->
+          <div class="col s4">
+          <div class="card hoverable">
+            <div class="card-image">
+                <img src="images/modal1.png">
+            </div>
+              <div class="card-content">
+                <p align=center><b>Empresas se cadastram</b></p>
+                <p align=center>Comerciantes e prestadores de serviço se cadastram, oferecendo diversos tipos de serviços distintos.</p>
+              </div>
+              <div class="card-action center-align">
+                <span class="card-title activator grey-text text-darken-4">Posso me cadastrar?<i class="material-icons"></i></span>
+              </div>
+                <div class="card-reveal">
+                   <span class="card-title grey-text text-darken-4">Quem pode se cadastrar?<i class="material-icons right">close</i></span>
+                  <center>
+                    <p><br>PetShops<br>Veterinários<br>Banho e Tosa<br>Adestradores<br>PetWalkers<br>PetSitters</p>
+                  </center>
+                </div>
+            </div></div>
+
+          <!-- Módulo 2 //-->
+          <div class="col s4">
+          <div class="card hoverable">
+            <div class="card-image">
+                <img src="images/modal2.png">
+            </div>
+              <div class="card-content">
+                <p align=center><b>Usuários encontram o que precisam</b></p>
+                <p align=center>Serviços e estabelecimentos de todos os tipos para seu pet, de maneira prática e perto de você.</p>
+              </div>
+              <div class="card-action">
+                <center><span class="card-title activator grey-text text-darken-4">Destinado a quem?<i class="material-icons"></i></span></center>
+              </div>
+                <div class="card-reveal">
+                   <span class="card-title grey-text text-darken-4">Destinado a qual usuário?<i class="material-icons right">close</i></span>
+                  <center>
+                    <p><br>Qualquer dono de animal de estimação, que busca empresas, comercios e serviços próximos destinados ao seu pet.</p>
+                  </center>
+                </div>
+            </div></div>
+
+          <!-- Módulo 3 //-->
+          <div class="col s4">
+          <div class="card hoverable">
+            <div class="card-image">
+                <img src="images/modal3.png">
+            </div>
+              <div class="card-content">
+                <p align=center><b>Seu pet agradeçe</b></p>
+                <p align=center>Satisfação, eficiencia e comodidade para você e seu amado animal de estimação.</p>
+              </div>
+              <div class="card-action">
+                <center><span class="card-title activator grey-text text-darken-4">Quem se beneficia?<i class="material-icons"></i></span></center>
+              </div>
+                <div class="card-reveal">
+                   <span class="card-title grey-text text-darken-4">Quem se beneficia?<i class="material-icons right">close</i></span>
+                  <center>
+                    <p><br>Todos! Os usuários encontram de modo rápido e prático, serviços e estabelecimentos relacionados ao seu animal, enquanto os anunciantes ofertam seus produtos e garantem maior visibilidade.</p>
+                  </center>
+                </div>
+            </div></div>
+
+            </div>
+          </div>
+        </div>
+    <section id='participe'>
+      <div class="container">
+        <div class="row participe-row">
+          <div class="col s12 m12">
+            <h1 class='center-align sobre-titulo'><i class="material-icons">mail_outline</i><br>Participe</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <form class="col s12 formValidate" id="formValidate" method="post" action="/insert">
+            <div class="row">
+              <div class="input-field col s12 m6">
+                <input ng-required="true" id="nome" length='45' type="text" class="validate" name="nome">
+                <label for="nome_usuario">Nome do Usuário</label>
+              </div>
+              <div class="input-field col s12 m6">
+                <input ng-required="true" id="cnpj" type="text" class="validate" name="cnpj">
+                <label for="cpnj">CNPJ</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 m6">
+                <input ng-required="true" id="razao_social" type="text" length='50' class="validate" name="razaoSocial">
+                <label for="razao_social">Razão Social</label>
+              </div>
+              <div class="input-field col s12 m6">
+                <input ng-required="true" id="nome_fantasia" type="text" length='50' class="validate" name="nomeFantasia">
+                <label for="nome_fantasia">Nome Fantasia</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 m3">
+                <input ng-required="true" id="cep" type='text' class="validate" name='cep'>
+                <label data-error="Cep Inválido." for="cep">CEP</label>
+                <div class="error"></div>
+              </div>
+              <div class="input-field col s12 m6">
+                <input ng-required="true" id="rua" type='text' length="50" class="validate" name="rua">
+                <label for="rua">Logradouro</label>
+              </div>
+              <div class="input-field col s12 m1">
+                <input ng-required="true" id="numero" type='text' class="validate" name="numero">
+                <label for="numero">Número</label>
+              </div>
+              <div class="input-field col s12 m2">
+                <input id="complemento" type='text' class="validate" name="complemento">
+                <label for="complemento">Complemento</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 m4">
+                <input ng-required="true" id="bairro" lenght="30" type="text" class="validate" name="bairro">
+                <label for="bairro">Bairro</label>
+              </div>
+              <div class="input-field col s12 m4">
+                <input ng-required="true" id="cidade" type='text' length="35" class="validate" name="cidade">
+                <label for="cidade">Cidade</label>
+              </div>
+              <div class="input-field col s12 m1">
+                <input ng-required="true" id="estado" type='text' class="validate" name="estado">
+                <label for="estado">Estado</label>
+              </div>
+              <div class="input-field col s12 m3">
+                <input ng-required="true" id="telefone" type="tel" class="validate" name="telefone">
+                <label for="telefone">Telefone de Contato</label>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="input-field col s12 m4">
+                <input ng-required="true" id="email" type="email" lenght="77" class="validate" name="email">
+                <label for="email">Email</label>
+              </div>
+              <div class="input-field col s12 m4">
+                <input ng-required="true" id="senha" type="password" length="25" class="validate" name="senha">
+                <label for="senha">Senha</label>
+              </div>
+              <div class="input-field col s12 m4">
+                <input ng-required="true" id="confirma_senha" type="password" length="25" name="confirma_senha" class="validate">
+                <label data-error=".errorTxt6" for="confirma_senha">Confirme sua senha</label>
+                <div class="error"></div>
+              </div>
+            </div>
+            <div class="row btn-row">
+              <div class="col m4 offset-m4">
+                <button class="btn waves-effect waves-light orange darken-2" type="submit" name="action">Enviar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src='javascripts/lib/angular.min.js'></script>
+    <script src='javascripts/app.js'></script>
+    <script src="javascripts/lib/jquery-3.1.1.min.js"></script>
+    <script src='javascripts/lib/jquery.countdown.min.js'></script>
+    <script src="javascripts/lib/jquery.mask.min.js"></script>
+    <script src="javascripts/lib/materialize.min.js"></script>
+    <script src="javascripts/controllers/homeCtrl.js"></script>
+    <script src="javascripts/lib/buscacep.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+    <script type="text/javascript">
+      $(".button-collapse").sideNav();
+      $(function(){
+
+        $('a[href*="#"]:not([href="#"])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html, body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+
+        $('#texto-inicio').slideDown(1000);
+        $("#cnpj").mask("99.999.999/9999-99");
+        $("#cep").mask("99.999-999");
+
+
+        //Mascara do Telefone
+        var telMascara = function(val){
+          return val.replace(/\D/g,'').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+        },
+        telOptions = {
+          onKeyPress: function(val, e, field, options){
+            field.mask(telMascara.apply({}, arguments), options);
+          }
+        };
+        $("#telefone").mask(telMascara, telOptions);
+      });
+
+      $("#dia")
+      .countdown("2017/08/01", function(event) {
+        $(this).text(
+          event.strftime('%D')
+        );
+      });
+      $("#hora")
+      .countdown("2017/01/01", function(event) {
+        $(this).text(
+          event.strftime('%H')
+        );
+      });
+      $("#minutos")
+      .countdown("2017/01/01", function(event) {
+        $(this).text(
+          event.strftime('%M')
+        );
+      });
+      $("#segundos")
+      .countdown("2017/01/01", function(event) {
+        $(this).text(
+          event.strftime('%S')
+        );
+      });
+
+   $(document).ready(function(){
+      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+      $('.modal-trigger').leanModal();
+    });
+
+  </script>
+
+  <footer class="page-footer blue-grey darken-2">
+    <div class="container">
+      <div class="row">
+        <div class="col l4 s12 offset-l4 center-align">
+          <img src="images/logo.png">
+          <a href="mailto:contato@gopet.com"><p class="grey-text text-lighten-4">contato@gopet.com</p></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center-align">
+        © 2016 GoPet - Todos os Direitos Reservados
+      </div>
+    </div>
+    </footer>
+  </body>
+</html>

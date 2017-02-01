@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="petApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pet App - Admin Painel</title>
+    <link rel="javascript" href="/javascript/app"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link rel="stylesheet" href="/stylesheets/login.css">
+    <link rel="stylesheet" href="/stylesheets/dashboard.css">
+
+    <!-- Automatizar !-->
+    <script type="text/javascript" src='../javascripts/lib/angular.min.js'></script>
+    <script type="text/javascript" src='../javascripts/lib/angular-ui-router.min.js'></script>
+    <script type="text/javascript" src='../javascripts/app.js'></script>
+    <script type="text/javascript" src='../javascripts/ui-routesConfig.js'></script>
+    <script type="text/javascript" src='../javascripts/controllers/mainCtrl.js'></script>
+    <script type="text/javascript" src='../javascripts/services/anuncianteAPI.js'></script>
+    <script type="text/javascript" src='../javascripts/controllers/admCtrl.js'></script>
+    <script type="text/javascript" src='../javascripts/value/configValue.js'></script>
+    <script type="text/javascript" src='../javascripts/interceptors/loginInterceptor.js'></script>
+    <script type="text/javascript" src='../javascripts/interceptors/interceptorsConfig.js'></script>
+    <script type="text/javascript" src="../javascripts/lib/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../javascripts/lib/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="../javascripts/lib/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script src='../javascripts/lib/jquery.countdown.min.js'></script>
+    <script type="text/javascript" src='../javascripts/directives/ngLoadScript.js'></script>
+    <script type="text/javascript" src='../javascripts/lib/ocLazyLoad.js'></script>
+    <script type="text/javascript" src='../javascripts/lib/ocLazyLoad.min.js'></script>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script src='js/jquery.countdown.min.js'></script>
+    
+  </head>
+  <body ng-controller="admCtrl">
+        <div>
+            <div ui-view></div>
+        </div>
+  </body>
+</html>

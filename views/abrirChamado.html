@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="chamado">
+<head>
+  <meta charset="utf-8">
+</head>
+<body ng-controller = "chamadoCtrl">
+  <form class="col s12 formValidate" id="formValidate" method="post" action="/abrirChamado">
+    <div class="input-field col s12 m4">
+      <input ng-required="true" id="anunciante" length='45' type="text" class="validate" name="anuciante">
+      <label>Anunciante</label>
+    </div>
+    <div class="input-field col s12 m4">
+      <input ng-required="true" id="titulo" length='45' type="text" class="validate" name="titulo">
+      <label>titulo</label>
+    </div>
+    <div class="input-field col s12 m4">
+      <input ng-required="mensagem" id="titulo" length='45' type="text" class="validate" name="mensagem">
+      <label>mensagem</label>
+    </div>
+    <div class="row btn-row">
+      <div class="col m4 offset-m4">
+        <button class="btn waves-effect waves-light orange darken-2" type="submit" name="action">Enviar</button>
+      </div>
+    </div>
+  </form>
+  <script src="../javascripts/lib/jquery-3.1.1.min.js"></script>
+  <script src="../javascripts/lib/materialize.min.js"></script>
+  <script src='../javascripts/lib/angular.min.js'></script>
+  <script src='../javascripts/app.js'></script>
+  <script src="../javascripts/controllers/chamadoCtrl.js"></script>
+</body>
+</html>

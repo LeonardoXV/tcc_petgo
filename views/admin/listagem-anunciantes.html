@@ -1,0 +1,44 @@
+<div ng-controller="mainCtrl">
+    <!-- Topo //-->
+    <div class="row top40">
+      <div class="col s12 m8 offset-l3">
+         <nav>
+          <div class="grey darken-3 nav-wrapper">
+            <div class="col s12 truncate">
+              <a onClick="return false;" href="" class="breadcrumb"><i class="white-text small material-icons">recent_actors</i>Anunciantes</a>
+              <a href="#" class="breadcrumb">Listagem</a>
+            </div>
+          </div>
+       </nav>
+      </div>
+    </div>
+
+    <!-- Tabela de Anunciantes //-->
+      <div class="row top40">
+        <div class="card-panel list-panel col s12 m8 offset-l3">
+          <table class="offset-l3 responsible-table bordered highlight">
+            <thead>
+              <tr>
+                  <th data-field="id">Nome Fantasia</th>
+                  <th data-field="name">CNPJ</th>
+                  <th data-field="price">Cidade</th>
+                  <th data-field="price">Bairro</th>
+                  <th data-field="price">Desde</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+                <tr ng-repeat="anunciante in anunciantesAceitos" ng-click="showAnunciantes(anunciante)">
+                  <td>{{anunciante.nomeFantasia}}</td>
+                  <td><a ng-href="#/{{anunciante.tagid}}">{{anunciante.cnpj}}</a></td>
+                  <td>{{anunciante.cidade}}</td>
+                  <td>{{anunciante.bairro}}</td>
+                  <td>{{anunciante.status.dataAceitacao | date:'fullDate'}}</td>
+                </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+</div>

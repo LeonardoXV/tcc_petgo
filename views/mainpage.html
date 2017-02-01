@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="petApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pet App - Fatec</title>
+    <link rel="javascript" href="javascript/app"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">  
+    <link rel="stylesheet" href="stylesheets/login.css">
+    <link rel="stylesheet" href="stylesheets/dashboard.css">
+    <link rel="stylesheet" href="stylesheets/sweetalert.css">
+
+    <!-- Automatizar !-->
+    <script type="text/javascript" src='javascripts/lib/angular.min.js'></script>
+    <script type="text/javascript" src='javascripts/lib/angular-ui-router.min.js'></script>
+    <script type="text/javascript" src='javascripts/app.js'></script>
+    <script type="text/javascript" src='javascripts/ui-routesConfig.js'></script>
+    <script type="text/javascript" src='javascripts/controllers/mainCtrl.js'></script>
+    <script type="text/javascript" src='javascripts/controllers/perfilCtrl.js'></script>
+    <script type="text/javascript" src='javascripts/services/anuncianteAPI.js'></script>
+    <script type="text/javascript" src='javascripts/controllers/loginCtrl.js'></script>
+    <script type="text/javascript" src='javascripts/value/configValue.js'></script>
+    <script type="text/javascript" src='javascripts/interceptors/loginInterceptor.js'></script>
+    <script type="text/javascript" src='javascripts/interceptors/interceptorsConfig.js'></script>
+    <script type="text/javascript" src="javascripts/lib/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="javascripts/lib/materialize.min.js"></script>
+    <script type="text/javascript" src="javascripts/lib/local_pt-br.js"></script>
+    <script src="javascripts/lib/jquery.mask.min.js"></script>
+    <script src='javascripts/lib/jquery.countdown.min.js'></script>
+    <script type="text/javascript" src='javascripts/lib/ocLazyLoad.min.js'></script>
+    <script src="javascripts/controllers/homeCtrl.js"></script>
+    <script src="javascripts/controllers/mainCtrl.js"></script>
+    <script src="javascripts/controllers/admCtrl.js"></script>
+    <script src="javascripts/lib/nav.js"></script>
+    <script src="javascripts/lib/sweetalert.min.js"></script>
+    <script src="javascripts/lib/sweetalert-dev.js"></script>
+    <script type="text/javascript" src="javascripts/lib/ngSweetAlert.js"></script>
+
+  </head>
+  <body ng-controller="mainCtrl">
+        <div>
+            <div ui-view></div>
+        </div>
+  </body>
+</html>

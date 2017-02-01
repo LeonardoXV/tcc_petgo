@@ -1,0 +1,64 @@
+<div ng-controller="mainCtrl">
+
+ <!-- Estrutura Módulo -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Qual o motivo do seu chamado?</h4>
+        <input ng-model="titulo" type="text" name="titulo" ng-model="chamado.">
+      </div>
+      <div class="modal-footer">
+        <button href="" class=" modal-action modal-close waves-effect waves-blue btn-flat" ng-click="sendReport()">Criar Chamado</button>
+        <a href="" class=" modal-action modal-close waves-effect waves-blue btn-flat">Voltar</a>
+      </div>
+    </div>
+
+
+    <!-- Topo //-->
+    <div class="row top40">
+      <div class="col s12 m8 offset-l3">
+              <nav>
+          <div class="grey darken-3 nav-wrapper">
+            <div class="col s12 truncate">
+              <a onClick="return false;" href="" class="breadcrumb"><i class="white-text small material-icons">chat</i>Meus Chamados</a>
+            </div>
+          </div>
+       </nav>
+         </div>
+    </div>
+
+    <!-- Tabela de Chamados //-->
+
+
+    <div class="row">
+      <div class="col s12 m8 offset-l3">
+        <div class="chat-panel card-panel">
+
+ <table class="offset-l3 responsible-table bordered highlight">
+            <thead>
+              <tr>
+                  <th data-field="id">Número do Ticket</th>
+                  <th data-field="name">Data de Abertura</th>
+                  <th data-field="price">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="chamado in chamados" ng-click="showChamado(chamado)" ui-sref="dashboard.chat({paramOne: chamado})">
+                  <td><a ng-href="#/{{chamado.tagid}}">{{chamado.titulo}}</a></td>
+                  <td>{{chamado.dataDeCriacao | date:'fullDate' }}</td>
+                  <td>Pendente</td>
+                </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+
+  <div class="row" ng-controller="mainCtrl">
+    <div class="col l8 offset-l3">
+      <a ng-click="trigger()" class="btn top20 btn-large waves-light modal-trigger grey darken-3">Criar Chamado</a>
+    </div>
+  </div>
+
+</div>

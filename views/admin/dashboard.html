@@ -1,0 +1,42 @@
+<div ng-app="petApp" ng-controller="admCtrl">
+    <!-- Data //-->
+    <div class="row top40">
+      <div class="col s12 m8 offset-l3">
+        <div class="card hoverable">
+            <div class="card-content center-align">
+            {{date | date:'fullDate'}}
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Cartões //-->
+    <!-- Quantidade de Anunciantes //-->
+      <div class="row">
+        <div class="col s12 m8 offset-l3">
+          <div class="card grey darken-3 hoverable">
+            <div class="card-content white-text">
+              <span class="card-title">Anunciantes</span>
+              <p>Você possui 0 novos anunciantes</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Ver<span class="orange darken-4 new badge">0</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+     <!-- Quantidade Chamados //-->
+      <div class="row">
+        <div class="col s12 m8 offset-l3">
+          <div class="card grey darken-3 hoverable">
+            <div class="card-content white-text">
+              <span class="card-title">Chamados</span>
+              <p>Você possui 0 novos chamados</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Ver<span class="orange darken-4 new badge">0</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

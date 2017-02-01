@@ -1,0 +1,33 @@
+<div ng-app="petApp" ng-controller="admCtrlLocation">
+    <div class="container">
+      <div class="row top30">
+        <div class="col l6 m8 s12 offset-m2 offset-l3 card-panel">
+
+        <div class="center-align">
+        	<i class="orange-text text-dargen-4 large material-icons">lock</i>
+        </div>
+
+          <form class="form-login" name="loginForm">
+            <div class="input-field">
+              <input ng-required="true" id="login" type='text' class="validate" name="email" ng-model="admin.email">
+              <label for="numero">Login</label>
+            </div>
+            <div class="input-field">
+              <input ng-required="true" id="senha" type='password' class="validate" name="senha" ng-model="admin.senha">
+              <label for="numero">Senha</label>
+            </div>
+            <div class="center-align">
+            <button class="btn waves-effect waves-light orange darken-2" ng-click="login(admin)">Enviar
+            </button>
+            </div>
+          </form>
+
+        </div>
+          <div class="row ">
+            <div class="col l6 m8 s12 offset-m2 offset-l3 center-align">
+              <a href='/' class="orange-text text-darken-1">Voltar</a>
+            </div>
+          </div>
+      </div>
+    </div>
+</div>

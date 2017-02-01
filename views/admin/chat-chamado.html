@@ -1,0 +1,89 @@
+<div ng-controller="admCtrl">
+    <!-- Topo //-->
+    <div class="row top40">
+      <div class="col s12 m8 offset-l3">
+         <nav>
+          <div class="grey darken-3 nav-wrapper">
+            <div class="col s12 truncate">
+              <a onClick="return false;" href="" class="breadcrumb"><i class="white-text small material-icons">chat</i>Chamados</a>
+              <a href="#!" class="breadcrumb">{{novoChamado.titulo}}</a>
+            </div>
+          </div>
+       </nav>
+      </div>
+    </div>
+
+    <div class="row top40">
+      <div class="col s12 m8 offset-l3">
+          <div class="white orange-text text-darken-1">
+            <div class="col s12 center-align">
+              <h5>Histórico de Mensagens</h5>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="row top20">
+      <div class="col l4 offset-l3">
+        Anunciante: {{novoChamado.nomeFantasia}}.
+      </div>
+      <div class="col l4">
+        Aberto em: {{novoChamado.dataDeCriacao | date:'fullDate'}}.
+      </div>
+
+    <div class="row">
+      <div class="col s12 m8 offset-l3">
+        <div class="chat-panel card-panel">
+        <div ng-repeat="chamadoConversa in novoChamado.conversa">
+
+            <div ng-if="chamadoConversa.remetente != 'suporte'">
+              <div class="row">
+                <div class="col s6 m6 l6">
+                  <div class="card-panel grey darken-3">
+                      <span class="card-title white-text" style="font-size: 80%">
+                          <i>
+                            {{novoChamado.nomeFantasia}}:
+                          </i>
+                        </span>
+                        <p class="white-text">{{chamadoConversa.mensagem}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div ng-if="chamadoConversa.remetente == 'suporte'">
+              <div class="row">
+                <div class="col s6 m6 l6 offset-l6">
+                  <div class="card-panel orange darken-4">
+                    <span class="card-title white-text" style="font-size: 80%">
+                      <i>
+                        Admin:
+                      </i>
+                    </span>
+                    <p class="white-text" >{{chamadoConversa.mensagem}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+         </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="row container">
+      <div class="col l6 s12 m8 offset-l2">
+        <form ng-submit="send()">
+            <input ng-model="textbox" maxlength="45">
+        </form>
+      </div>
+      <div class="col l2 s12 m12 center-align">
+        <button class="top10 btn waves-effect waves-light grey darken-3" type="submit" name="action" ng-click="sendMessage(textbox)">Enviar</button>
+      </div>
+      <div class="col l2 s12 m12 container center-align">
+        <button class="top10 waves-effect waves-light btn grey darken-3" ng-click="encerrarChamado()" ng-show="novoChamado.emAberto">Encerrar</button>
+      </div>
+    </div>
+</div>

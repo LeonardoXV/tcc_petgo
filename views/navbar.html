@@ -1,0 +1,50 @@
+<div ng-controller="mainCtrl">
+    <!-- Barra lateral Inicial //-->
+    <div id="sidebar hide-on-med-and-down">
+      <!-- Lista de Componentes //-->
+      <ul id="sidebar-static" class="orange darken-4 right hide-on-med-and-down side-nav fixed"
+      style="transform: translateX(0%);">
+        <div class="content-sidebar">
+          <!-- Foto //-->
+          <div class="container-foto">
+            <li>
+                <img id="person" align="center" class="hoverable hide-on-med-and-down" src="images/person.png" style="width: 150px">
+            </li>
+          </div>
+            <!-- Botões //-->
+
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+
+                <li class="bold"><a ui-sref="dashboard.chamados" class="waves-effect"><i class="small material-icons">chat</i>Meus Chamados</a></li>
+                <li class="bold"><a ui-sref="dashboard.profile" class="waves-effect"><i class="small material-icons">settings</i>Gerenciar Perfil</a></li>
+                <li style="padding-top: 20px"></li>
+                <li class="bold"><a href="login#/" ng-click="logout()" class="waves-effect"><i class="small material-icons">power_settings_new</i>Logout</a></li>
+
+              </ul>
+            </li>
+         </div>
+      </ul>
+    </div> 
+
+    <!-- Barra lateral Mobile //-->
+    <div id="sidebar hide-on-large-only"> 
+      <ul id="sidebar-active" class="right side-nav fixed hide-on-large-only" 
+      style="transform: translateX(0%);">
+        <div class="content-sidebar hide-on-large-only">
+          <div class="container-foto">
+            <li><img id="person" align="center" class="hoverable" src="img/person.png" style="width: 150px"></li>
+          </div>
+            <li class="bold"><a ui-sref="dashboard.chamados" class="waves-effect">Meus Chamados</a></li>
+            <li class="bold"><a ui-sref="dashboard.chamados" class="waves-effect">Gerenciar Perfil</a></li>
+            <li class="bold"><a ui-sref="#/" ng-click="logout()" class="waves-effect">Logout</a></li>
+         </div>
+      </ul>  
+    </div> 
+
+    <!-- Action (Chamar NavBar) //-->
+    <a href="#" data-activates="sidebar-active" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only"> <i class="material-icons">reorder</i></a>
+
+        <div ui-view>
+        </div>
+    </div>

@@ -1,0 +1,200 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  background: #eee;
+}
+
+footer.page-footer {
+    margin-top: 105px;
+}
+
+
+
+/* Configurações Gerais - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* Margens */
+.top40 {
+  margin-top: 40px;
+}
+.top30{
+  margin-top: 30px;
+}
+.top25 {
+  margin-top: 25px;
+}
+.top20{
+  margin-top: 20px;
+}
+.top10{
+  margin-top: 10px;
+}
+
+/* Cor dos Links */
+a {
+  color: black; 
+}
+
+/* Sem margem para linha e sempre alinhado à vertical */
+.row{
+  margin-bottom: 0;
+  vertical-align: center;
+}
+
+/* Mouse pointer ao passar pelas linhas das tabelas */
+tr {
+  cursor: pointer;
+}
+
+/* Confogurações de icones em geral */
+.material-icons {
+    font-size: 40px;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Fim das configurações Gerais - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+
+
+
+/* Configurações da Barra de Navegação Lateral - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* Cor do fundo */
+nav {
+    background-color: #f2aa1a;
+}
+
+/* Largura fixa */
+.side-nav{
+  width: 250px;
+}
+
+/* Cor das letras dos botões */
+.side-nav.fixed a {
+    color: white;
+}
+
+/* Margem entre botões */
+.side-nav li {
+    margin-top: 4px;
+}
+
+/* Margem superior e inferior da foto */
+#person{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Alinhamento da Foto */
+.container-foto {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Alinhamento dos icones */
+.side-nav li>a>i, .side-nav li>a>[class^="mdi-"], .side-nav li>a>[class*="mdi-"], .side-nav li>a>i.material-icons {
+    line-height: 27px;
+}
+
+/* Fim das configurações da Barra de Navegação Lateral - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+
+
+/* Cores em Geral - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Cor das badges */
+span.badge.new {
+    background-color: #f2aa1a; /* Laranja */
+}
+
+/* Cor do conteudo do DropDown */
+.dropdown-content li>span {
+    color: #000000;
+}
+
+/* Cor do checkbox selecionado */
+[type="checkbox"]:checked+label:before {
+    border-right: 2px solid #f2aa1a; /* Laranja */
+    border-bottom: 2px solid #f2aa1a; /* Laranja */
+}
+
+/* Cor da switch ao reprovar novo anunciante */
+.switch label .lever {
+    background-color: red;
+}
+.switch label .lever:after {
+    background-color: red;
+}
+
+/* Cor da switch ao apvrovar novo anunciante */
+.switch label input[type=checkbox]:checked+.lever {
+    background-color: green;
+}
+.switch label input[type=checkbox]:checked+.lever:after {
+    background-color: green;
+    left: 24px;
+}
+
+/* Cor da linha do input ao ganhar foco */
+.input-field input[type=text]:focus {
+     border-bottom: 1px solid #f2aa1a; /* Laranja */
+     box-shadow: 0 1px 0 0 #f2aa1a; /* Laranja */
+}
+
+/* Cor do input ao ser selecionado */
+input:not([type]):focus:not([readonly]) {
+    border-bottom: 1px solid #f2aa1a; /* Laranja */
+    box-shadow: 0 1px 0 0 #f2aa1a; /* Laranja */
+}
+
+/* Cor dos botões (padrão) */
+.btn {
+  background-color: #f2aa1a; /* Laranja */
+}
+.btn:hover, .btn-large:hover {
+    background-color: #ef6c00;
+}
+
+/* Fim das cores em Geral - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+
+
+/* Estrutura do Chat */
+.chat-panel {
+  height: 350px;
+  overflow: auto;
+  margin-top: 60px;
+}
+
+/* Estrutura das listas */
+.list-panel {
+  height: 450px;
+  overflow: auto;
+}
+
+/* Cor ao input ser selecionado */
+input[type=text]:focus {
+     border-bottom: 1px solid #f2aa1a;
+     box-shadow: 0 1px 0 0 #f2aa1a;
+}
+
+/* Movimentação da Label */
+input:not([type]), input[type=text] {
+    margin: 0px 20px 20px 0;
+}
+
+/* Efeitos de Sombra e alteração de cor */
+input[type=text]:focus:not([readonly]) {
+     border-bottom: 1px solid #f2aa1a;
+     box-shadow: 0 1px 0 0 #f2aa1a;  
+}
+
+/* Margem específica para todo card-panel */
+.card-panel {
+  margin-top: 20px;
+}
+
+/* Alinhamento dos icones na Breadcrumb */
+.breadcrumb i, .breadcrumb [class^="mdi-"], .breadcrumb [class*="mdi-"], .breadcrumb i.material-icons {
+    line-height: 23px;
+}

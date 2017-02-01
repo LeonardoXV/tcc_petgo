@@ -1,0 +1,37 @@
+<div ng-controller="admCtrl">
+    <!-- Topo //-->
+    <div class="row top40">
+      <div class="col s12 m8 offset-l3">
+              <nav>
+			    <div class="grey darken-3 nav-wrapper">
+			      <div class="col s12 truncate">
+			        <a onClick="return false;" href="" class="breadcrumb"><i class="white-text small material-icons">chat</i>Chamados</a>
+			        <a href="#!" class="breadcrumb">Listagem</a>
+			      </div>
+			    </div>
+ 			 </nav>
+         </div>
+    </div>
+
+    <!-- Tabela de Chamados //-->
+      <div class="row top40">
+        <div class="card-panel list-panel col s12 m8 offset-l3">
+          <table class="offset-l3 responsible-table bordered highlight">
+            <thead>
+              <tr>
+                  <th data-field="price">Título</th>
+                  <th data-field="name">Última Resposta</th>
+                  <th data-field="price">Empresa</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="chamado in Todoschamados" ng-click="showChamadoListagem(chamado)" ui-sref="painel.chat-chamado({paramOne: chamado})">
+                  <td><a ng-href="#/{{chamado.tagid}}">{{chamado.titulo}}</a></td>
+                  <td>{{chamado.dataDeCriacao | date:'fullDate'}}</td>
+                  <td>{{chamado.nomeFantasia}}</td>
+                </tr></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+</div>

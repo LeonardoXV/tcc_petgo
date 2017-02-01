@@ -1,0 +1,146 @@
+<div ng-controller="admCtrl">
+
+<!-- Estrutura Módulo -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+
+  <!-- Dados do Anunciante //-->
+  <div class="row top-form">
+    <form class="col s12 m12">
+
+    <div class="row">
+      <div class="input-field col s12">
+        <input disabled id="cnpj" type="text" class="validate" value="{{anuncianteModal.cnpj}}">
+        <label for="cnpj" class="active">CNPJ</label>
+      </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+          <input disabled id="razaoSocial" type="text" class="validate" value="{{anuncianteModal.razaoSocial}}">
+          <label for="razaoSocial" class="active">Razão Social</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="nomeFantasia" type="text" class="validate" value="{{anuncianteModal.nomeFantasia}}">
+          <label for="nomeFantasia" class="active">Nome Fantasia</label>
+        </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+<<<<<<< HEAD
+        <input id="logradouro" type="text" class="validate" value="{{anuncianteModal.rua}}">
+=======
+<<<<<<< HEAD
+        <input id="logradouro" type="text" class="validate" value="{{anuncianteModal.rua}}">
+        <label for="logradouro">Rua</label>
+=======
+        <input id="logradouro" type="text" class="validate" value="{{anuncianteModal.logradouro}}">
+>>>>>>> 3e863c8e291859b8995c362f2d95d9e0ab6bed3c
+        <label for="logradouro" class="active">Rua</label>
+>>>>>>> 1bc9ad60566418f8e310b88c0b0effcd6059270b
+      </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s4">
+          <input id="cidade" type="text" class="validate" value="{{anuncianteModal.cidade}}">
+          <label for="cidade" class="active">Cidade</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="estado" type="text" class="validate" value="{{anuncianteModal.estado}}">
+          <label for="estado" class="active">Estado</label>
+        </div>
+        <div class="input-field col s4">
+          <input id="cep" type="text" class="validate" value="{{anuncianteModal.cep}}">
+          <label for="cep" class="active">CEP</label>
+        </div>
+    </div>
+      <div class="row">
+      <div class="input-field col s6">
+        <input id="email" type="text" class="validate" value="{{anuncianteModal.email}}">
+        <label for="email" class="active">Email de Login</label>
+      </div>
+      <div class="input-field col s6">
+        <select multiple>
+            <option value="" disabled selected>Serviços Oferecidos</option>
+            <option value="1">PetShop</option>
+            <option value="2">Veterinário</option>
+            <option value="3">Banho e Tosa</option>
+            <option value="4">Adestrador</option>
+            <option value="5">PetWalker</option>
+            <option value="6">PetSitter</option>
+          </select>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="input-field col s6">
+          <input id="site" type="text" class="validate" value="{{anuncianteModal.site}}">
+          <label for="site" class="active">Site</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="social" type="text" class="validate" value="{{anuncianteModal.social}}">
+          <label for="social" class="active">Rede Social</label>
+        </div>
+    </div>
+
+      <div class="bot-form row">
+        <div class="col s8">
+          <div class="switch">
+          <label>
+            Reprovar
+            <input type="checkbox" ng-click="isSwitchedOn = !isSwitchedOn" ng-checked="isSwitchedOn">
+            <span class="lever"></span>
+            Aprovar
+          </label>
+        </div>
+      </div>
+
+      <div class="col s4">
+          <button class="waves-effect waves-light btn grey darken-3" ng-click="aprovar(isSwitchedOn,anuncianteModal)">Enviar</button>
+      </div>
+    </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Topo //-->
+
+    <div class="row top40">
+      <div class="col s12 m8 offset-l3">
+         <nav>
+          <div class="grey darken-3 nav-wrapper">
+            <div class="col s12 truncate">
+              <a onClick="return false;" href="" class="breadcrumb"><i class="white-text small material-icons">contacts</i>Anunciantes</a>
+              <a href="#!" class="breadcrumb">Novos</a>
+            </div>
+          </div>
+       </nav>
+      </div>
+    </div>
+
+    <!-- Tabela de Novos Anunciantes //-->
+      <div class="row top40">
+        <div class="card-panel list-panel col s12 m8 offset-l3">
+          <table class="offset-l3 responsible-table bordered highlight">
+            <thead>
+              <tr>
+                  <th data-field="id">Nome Fantasia</th>
+                  <th data-field="name">CNPJ</th>
+                  <th data-field="price">Solicitado em</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+                <tr ng-repeat="anunciante in anunciantesEspera" ng-click="trigger();preencher(anunciante)" class="modal-trigger">
+                  <td>{{anunciante.nomeFantasia}}</td>
+                  <td>{{anunciante.cnpj}}</a></td>
+                  <td>{{anunciante.status.dataRequisicao | date:"fullDate"}}</td>
+                </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+</div>
